@@ -1,6 +1,8 @@
 package com.example.lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Query;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +17,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Stream;
 
 public class MainActivity extends AppCompatActivity {
-
+    private int globalId = 100;
     final String TEXT_VIEW_KEY="CevaString";
     ListView listView;
     TextView textView;
@@ -37,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
         }
         textView = (TextView) findViewById(R.id.textView);
         listView = (ListView)findViewById(R.id.lvExp);
+
+        ArrayList<Product> list = CreateDatabase();
         final ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("papuci");
-        arrayList.add("blugi");
-        arrayList.add("ochelari");
-        arrayList.add("adidasi");
+        for (Product product : list)
+        {
+            arrayList.add(product.name);
+        }
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
 
@@ -58,7 +65,26 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+    private ArrayList<Product> CreateDatabase(){
+        AppDatabase database = Room.databaseBuilder(this, AppDatabase.class, "db-products")
+                .allowMainThreadQueries()   //Allows room to do operation on main thread
+                .build();
+        Product p1 = new Product();
+        p1.uid =  ++globalId;
+        p1.name = "Nike";
+        Product p3 = new Product();
+        p3.uid =  ++globalId;
+        p3.name = "Puma";
+        Product p4 = new Product();
+        p4.uid =  ++globalId;
+        p4.name = "Loto";
+        Product p5 = new Product();
+        p5.uid =  ++globalId;
+        p5.name = "Umbro";
+//        database.getProductDao().insertAll(p4,p3,p5);
 
+        return (ArrayList<Product>) database.getProductDao().getAll();
+    }
     @Override
     public void onPause(){
         super.onPause();
