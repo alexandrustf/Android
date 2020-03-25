@@ -11,3 +11,6 @@ Pe data de 18.03 am postat laboratorul 4.
   
 Pe data de 25.03 am postat laboratorul 5
   Am creeat o noua activitate "Settings", intram din meniu in aceasta. De aici putem seta username-ul aplicatiei si sa-l stocam cu ajutorul SharedPreferences. Avem un textBox in care putem vedea numele actual din aplicatie. Am pus un editBox si un buton de submit. Completam numele user-ului si dam submit. Acesta va fi setat prin Shared Preferences. Va fi updatat numele actual din aplicatie si din textBox.
+  Pentru partea a2a. Am creeat o baza de date cu Room. Am introdus in gradle.build dependentele. Am creeat clasa Product,
+ ProductDAO si AppDatabase. In activitatea Main, produsele sunt acum luate din baza de date. Am creeate o functie "CreateDatabase" care 
+ instantiaza baza de date( tot de aici am inserat produsele) si imi returneaza toate produsele din baza de date.
