@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     int positionItem = 0;
     final String produse_menu_item = "Produse";
     final String cos_menu_item = "Cos";
-    final String FAQ_menu_item = "FAQ";
+    final String Settings_menu_item = "Settings";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,15 +112,22 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.products:
+            case R.id.cart:
                 sendMessage();
                 return true;
-            case R.id.cart:
+            case R.id.settings:
+                goToSettings();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    private void goToSettings() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     public void sendMessage() {
