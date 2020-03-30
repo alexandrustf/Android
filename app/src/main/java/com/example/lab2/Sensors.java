@@ -29,6 +29,8 @@ public class Sensors extends AppCompatActivity implements SensorEventListener {
             sensors += sensor.getName() + " \n";
         }
         textView.setText(sensors);
+
+
     }
 
     protected void onResume() {

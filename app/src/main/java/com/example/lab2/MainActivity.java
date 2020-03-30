@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sensors:
                 goToSensors();
                 return true;
-            case R.id.map:
+            case R.id.location:
                 goToMap();
                 return true;
             default:
