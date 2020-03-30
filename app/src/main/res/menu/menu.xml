@@ -6,8 +6,14 @@
 <!--        />-->
     <item android:id="@+id/cart"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/cos_menu" />
+        android:title="@string/cart_menu" />
     <item android:id="@+id/settings"
         android:icon="@drawable/ic_launcher_background"
         android:title="@string/settings_menu" />
+    <item android:id="@+id/sensors"
+    android:icon="@drawable/ic_launcher_background"
+    android:title="@string/sensors_menu" />
+    <item android:id="@+id/location"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/title_activity_location" />
 </menu>

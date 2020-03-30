@@ -144,6 +144,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.settings:
                 goToSettings();
                 return true;
+            case R.id.sensors:
+                goToSensors();
+                return true;
+            case R.id.map:
+                goToMap();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -153,7 +159,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
-
+    private void goToSensors() {
+        Intent intent = new Intent(this, Sensors.class);
+        startActivity(intent);
+    }
+    private void goToMap() {
+        Intent intent = new Intent(this, Location.class);
+        startActivity(intent);
+    }
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     public void sendMessage() {
