@@ -14,3 +14,7 @@ Pe data de 25.03 am postat laboratorul 5
   Pentru partea a2a. Am creeat o baza de date cu Room. Am introdus in gradle.build dependentele. Am creeat clasa Product,
  ProductDAO si AppDatabase. In activitatea Main, produsele sunt acum luate din baza de date. Am creeate o functie "CreateDatabase" care 
  instantiaza baza de date( tot de aici am inserat produsele) si imi returneaza toate produsele din baza de date.
+ 
+ 
+ Pe data de 30.03 am postat laboratorul 6
+  Am creeat o noua activitate numita Sensors(care apare si in meniu ca si senzori), am accesat sensorii telefonului si am afisat o lista toti senzorii din SensorManager. Pt al 2 lea punct, am creeat o activitate de tip Google Maps, am luat API KEY de pe site-ul google. Activitatea se numeste Location(in tab-ul Map al meniului) si ni se afiseaza harta cu un marker in Iasi(am pus coordonatele din Iasi 47.151726, 27.587914).
