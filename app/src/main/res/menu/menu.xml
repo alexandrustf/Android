@@ -16,4 +16,7 @@
     <item android:id="@+id/location"
         android:icon="@drawable/ic_launcher_background"
         android:title="@string/title_activity_location" />
+    <item android:id="@+id/camera"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/camera_menu" />
 </menu>

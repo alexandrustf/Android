@@ -7,5 +7,6 @@
     <string name="sensors_menu">Senzori</string>
     <string name="cart_menu">Cos</string>
     <string name="title_activity_location">Map</string>
+    <string name="camera_menu">Camera</string>
 
 </resources>

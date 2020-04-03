@@ -150,11 +150,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.location:
                 goToMap();
                 return true;
+            case R.id.camera:
+                goToCamera();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    private void goToCamera(){
+        Intent intent = new Intent(this, Camera.class);
+        startActivity(intent);
+    }
     private void goToSettings() {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
